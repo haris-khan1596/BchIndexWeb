@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localcoins - Ultimate Peer to Peer Crypto Exchange Platform</title>
+  <!-- favicon -->
+  <link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png" />
+  <!-- bootstrap 5  -->
+  <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css" />
+  <!-- fontawesome 5  -->
+  <link rel="stylesheet" href="assets/css/lib/font-awesome.css" />
+  <!-- lineawesome font -->
+  <link rel="stylesheet" href="assets/css/lib/line-awesome.css" />
+  <!-- Simplebar Js  -->
+  <link rel="stylesheet" href="assets/css/lib/simplebar.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#docNav" data-bs-offset="50">
+
+
+  <header class="mobile-header">
+    <div class="container">
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-6">
+          <!-- Logo  -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+          </a>
+          <!-- Logo End -->
+        </div>
+        <div class="col-6">
+          <div class="text-end">
+            <button type="button" class="btn btn--sqr sidebar-toggler">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc__sidebar" id="docNav">
+      <div class="doc-logo">
+        <!-- Logo  -->
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="images" class="img-fluid logo__is" />
+        </a>
+        <!-- Logo End -->
+      </div>
+      <nav class="doc-nav" data-simplebar>
+        <ul class="list doc-nav__list">
+          <li>
+            <a href="#introduction" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="lar la-clone"></i> <span
+                  class="d-block">introduction</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-req" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-server"></i> <span class="d-block">server
+                  requirements</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#server-faq" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-question"></i> <span
+                  class="d-block">server FAQ</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#installation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-cog"></i> <span class="d-block">how to
+                  install </span></span> </a>
+          </li>
+          <li>
+            <a href="#activation" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-check-circle"></i> <span
+                  class="d-block">how to activate </span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#folder" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-folder"></i> <span class="d-block">
+                  folder structure
+                </span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#admin-dashboard" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-desktop"></i>
+                <span class="d-block">
+                  admin dahshboard
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#manage-users" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-users"></i>
+                <span class="d-block">
+                  manage users
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-ad" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-ad"></i>
+                <span class="d-block">
+                  Manage Ads
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-trade" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-exchange-alt"></i>
+                <span class="d-block">
+                  Manage Trades
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-crypto-currencies" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-coins"></i>
+                <span class="d-block">
+                  Crypto Currencies
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-fiat-gateways" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-money"></i>
+                <span class="d-block">
+                  Fiat Gateways
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#manage-fiat-currencies" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-dollar-sign"></i>
+                <span class="d-block">
+                  Fiat Currencies
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#payment-windows" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-clock"></i>
+                <span class="d-block">
+                  Payment Windows
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#deposits" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-money-bill"></i>
+                <span class="d-block">
+                  Deposits
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#withdrawals" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-hand-holding-usd"></i>
+                <span class="d-block">
+                  Withdrawals
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#support-tickets" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-ticket-alt"></i>
+                <span class="d-block">
+                  Support Ticket
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#reports" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="las la-th-list"></i>
+                <span class="d-block">
+                  Report
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-toolbox"></i>
+                <span class="d-block">
+                  general setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#system-config" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-cogs"></i>
+                <span class="d-block">
+                  System configuration
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#api-setting" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-database"></i>
+                <span class="d-block">
+                  Api Setting
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#extensions" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-plug"></i>
+                <span class="d-block">
+                  extensions
+                </span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#seo" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-globe-asia"></i>
+                <span class="d-block">
+                  seo manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#language" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-language"></i>
+                <span class="d-block">
+                  language manager
+                </span>
+              </span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#support" class="doc-nav__link nav-link">
+              <span class="list list--row align-items-center"><i class="la la-headset"></i>
+                <span class="d-block">
+                  support
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p class="m-0 text--white px-3 text-center">Copyright © <a href="https://viserlab.com/"
+            class="t-link t-link--canvas">ViserLab</a> 2022</p>
+      </div>
+    </div>
+    <div class="doc__body">
+      <div id="introduction" class="section--sm section--first">
+        <div class="list">
+          <div class="doc-head">
+            <div class="doc-head__content">
+              <h5 class="doc-head__title">LocalCoins</h5>
+              <span class="doc-head__sub-title">
+                Ultimate Peer to Peer Crypto Exchange Platform
+              </span>
+            </div>
+          </div>
+          <div class="doc-body">
+            <ul class="list" style="--gap: 0.2rem">
+              <li><strong>Created :</strong> 2020-09-28</li>
+              <li>
+                <strong>By :</strong>
+                <a href="https://codecanyon.net/user/viserlab" class="t-link">Viserlab</a>
+              </li>
+              <li><strong>Email :</strong> <a class="t-link" href="mailto:support@viserlab.com">support@viserlab.com</a>
+              </li>
+            </ul>
+
+            <p class="mt-4 lg-text mb-1">
+              <strong>LocalCoins</strong> is one of the best P2P crypto exchange software solution in CodeCanyon. This
+              is a virtual
+              marketplace for digital money, connecting buyers and sellers and providing tools to enable seamless and
+              honest chat and exchange.
+            </p>
+
+            <ol class="fw-bold">
+              <li>Users through LocalCoins can set the selling price, exchange rate, acceptable payment modes.</li>
+              <li>Trading counterparties looking for suitable cryptocurrency and exchange rate offers within the
+                advertiser's location and getting connected.</li>
+              <li>Both parties agree on the payment method and transaction amount via the chat system.</li>
+              <li>
+                The deal takes place on the conditions and platform agreed over the chat. Smart
+                contracts together facilitate an honest exchange.
+              </li>
+              <li>
+                The user who bought/sold the cryptocurrency from the offer can share his feedback based on his
+                experience.
+              </li>
+            </ol>
+
+            <h5 class="mt-5">Exclusive Features of Localcoins Exchange Platform</h5>
+            Some key features that make Localcoins unique and popular are:
+
+            <ul>
+              <li>Offer/Advertisements based business model</li>
+              <li>A simple registration and profile setup process</li>
+              <li>An autonomous trading system</li>
+              <li>Location-based offer filtering feature</li>
+              <li>Feedback/Review feature</li>
+              <li>A well-planned verification procedure to avoid unauthorized access</li>
+              <li>KYC/Document verification system to verify users</li>
+              <li>Effortlessly accessible, customer support system</li>
+              <li>Robust security mechanism including 2FA, protection against XSS, CSRF, SQL injections, etc.</li>
+            </ul>
+
+
+            <p class="mt-4 lg-text">
+              The documentation will help to understand the total system and we have tried to summarize the total
+              process of the site here. This script comes with a very simple and easy-to-use admin panel, user panel
+              which leads to use without any coding knowledge.
+            </p>
+            <blockquote class="blockquote text--accent">
+              If needed, we will update this script continuously and come with new features and security patches. We
+              will try to give the best user experience to all of our clients.
+            </blockquote>
+            <p class="mt-4 lg-text">
+              Thank you for purchasing <strong>LocalCoins</strong>. If you have any questions or queries that are not
+              answered in this document, please feel free to contact us via email. We will try to respond to you as soon
+              as possible. Thank you so much.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="server-req" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server Requirements</h5>
+                  <span class="doc-head__sub-title">
+                    All server requirements are stated bellow
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-4">
+                  <div class="doc-body">
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>PHP Version 8.1</li>
+                      <li>MySQL Version 5.7+ or MariaDB version 10.2+</li>
+                      <li>BCMath PHP Extension</li>
+                      <li>Ctype PHP Extension</li>
+                      <li>cURL PHP Extension</li>
+                      <li>DOM PHP Extension</li>
+                      <li>Fileinfo PHP Extension</li>
+                      <li>GD PHP Extension</li>
+                      <li>JSON PHP Extension</li>
+                      <li>Mbstring PHP Extension</li>
+                      <li>OpenSSL PHP Extension</li>
+                      <li>PCRE PHP Extension</li>
+                      <li>PDO PHP Extension</li>
+                      <li>pdo_mysql PHP Extension</li>
+                      <li>Tokenizer PHP Extension</li>
+                      <li>XML PHP Extension</li>
+                      <li>allow_url_fopen()</li>
+                      <li>file_get_contents()</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-8">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/server.png" alt="image" class="img-fluid w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="server-faq" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Server FAQ</h5>
+                  <span class="doc-head__sub-title">
+                    Frequently Asked Questions About Server
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do I need VPS or a Dedicated server to run this system?
+                    </p>
+                    <p class="m-0">
+                      No, You can run this system in a shared host as well and it will run smoothly. But if you have
+                      much traffic, you may need to upgrade your server/hosting. Our codes are highly optimized to
+                      ensure the best possible performance.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Which hosting provider should I choose for this? Do you have any suggestions?
+                    </p>
+                    <p class="m-0">
+                      You can choose any hosting provider that provides cPanel-based hosting. cPanel is not a must, but
+                      we recommend you to have cPanel-based hosting.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      I don't have cPanel, What should I do?
+                    </p>
+                    <p class="m-0">
+                      Nothing to worry about, Our system will work with any control panel but cPanel is easy to manage,
+                      for that we recommend cPanel-based hosting. Also, Our free Support is limited to cPanel-based
+                      hosting only.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <div class="faq-body">
+                    <p class="mb-2 fw-bold text--canvas">
+                      Do you provide hosting as well?
+                    </p>
+                    <p class="m-0">
+                      Yes, We do. We can provide a complete solution for your hosting. We can provide <a class="t-link"
+                        href="https://viserlab.com/hosting/budget" target="_blank">budget shared hosting</a>, <a
+                        class="t-link" href="https://viserlab.com/hosting/premium" target="_blank">premium shared
+                        hosting</a>, <a class="t-link" href="https://viserlab.com/hosting/vps" target="_blank">VPS</a>,
+                      <a class="t-link" href="https://viserlab.com/hosting/dedicated" target="_blank">Dedicated
+                        servers</a>, and Cluster from various geolocation. Please contact us for more details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="installation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Installation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Installation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4 align-items-center">
+                <div class="col-xl-6">
+                  <div class="doc-body">
+                    <p class="lead">
+                      Installation is very easy with our Easy Installer. You can install yourself simply in few steps
+                      without any coding knowledge. We develop our installation system to make the installation process
+                      flawless and easy.
+                    </p>
+                    <p class="xl-text fw-md">Installation Steps:</p>
+                    <ul class="list list--base">
+                      <li>
+                        <p class="m-0">
+                          Upload the whole file to the server you have downloaded from download after purchase.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          Extract/Unzip the file and move all files in the <code>Files</code> folder to the main
+                          folder(where you want to install it). Make sure you have moved the <code>index.php</code> and
+                          <code>.htaccess</code> as well.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">Now please browse http://<code>your-site-url</code>/install/index.php and follow
+                          the process. Your system should be ready to use.
+                        </p>
+                      </li>
+                    </ul>
+
+                    <p class="xl-text mt-4">
+                      If you are still unable to install the system, please contact us. we offer free installation in
+                      cPanel-based hosting.
+                    </p>
+                    <p class="xl-text fw-md mb-2">Admin Login:</p>
+                    <ul class="list" style="--gap: 0.2rem">
+                      <li>
+                        <span class="d-block">Admin login URL is:
+                          <strong>
+                            http://<code>your-site-url</code>/admin</strong>
+                        </span>
+                      </li>
+                      <li>
+                        <strong>Username :</strong> [as_you_set_on_installation]
+                      </li>
+                      <li>
+                        <strong>Password :</strong> [as_you_set_on_installation]
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/installation.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="activation" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Activation</h5>
+                  <span class="doc-head__sub-title">
+                    Application Activation Process
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row g-4">
+            <div class="col-xl-6">
+              <div class="doc-body h-auto">
+                <p>
+                  After installing the system you need to activate it. When you visit the system, you will be able to
+                  see the activation page. Just provide this information to activate and run your system. Your provided
+                  information will send to ViserLab server to verify and we never collect any sensitive or confidential
+                  data.
+                </p>
+                <ul class="list list--base" style="--gap: 0.5rem">
+                  <li>
+                    <p class="m-0">
+                      <strong>Purchase Code:</strong> To get purchase code <a
+                        href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-Is-My-Purchase-Code-"
+                        target="_blank">Click Here</a>.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Envato Username:</strong> Your Envato username with which you bought system.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      <strong>Email:</strong> Provide your email for further communication.
+                    </p>
+                  </li>
+                </ul>
+                <p class="mt-5">
+                  <code>The purchase code(license) is for one website or domain only. Please activate the license into the correct domain(URL) to avoid any unwanted issues in the future.</code>
+                </p>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="doc-body--alt t-center">
+                <img src="assets/images/activation.jpg" alt="image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="folder" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Folder Structure</h5>
+                  <span class="doc-head__sub-title">
+                    Application Folder Details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="doc-body">
+                <p class="lead">
+                  After installation, There will be two folders and two files will be in your main folder.
+                </p>
+                <ul class="list" style="--gap: 0.3rem">
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">assets</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-folder"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">core</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">.htaccess</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="list list--row align-items-center">
+                      <span class="xl-text lh-1">
+                        <i class="fas fa-file-code"></i>
+                      </span>
+                      <span class="lg-text d-inline-block">index.php</span>
+                    </span>
+                  </li>
+                </ul>
+                <ul class="list list--base mt-4">
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"assets" </strong> folder, We keep all
+                      kinds of assets like <strong>CSS, JS, Images</strong>. If
+                      you want To edit or change anything over CSS or js, please
+                      have a look at this folder.
+                    </p>
+                  </li>
+                  <li>
+                    <p class="m-0">
+                      On the <strong>"core"</strong> folder, We keep the core of
+                      Laravel and we maintain full MVC structure on this
+                      project.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="admin-dashboard" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Admin Dashboard</h5>
+                  <span class="doc-head__sub-title"> Dashboard Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      The items come with the latest secure admin panel with a unique Admin Dashboard. You can check all
+                      information and process by login on to your dashboard. You can manage all the basic information
+                      from here where the website is managed.
+                    </p>
+                    <p>
+                      You'll be able to see a full overview of your system from this dashboard like how many users
+                      you've, Deposit summary, Withdrawal summary
+                      users etc.
+                    </p>
+                    <p class="m-0 lead">
+                      <strong>Note: </strong> You can manage everything from this dashboard! No need to edit any
+                      code or database.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/dashboard.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="manage-users" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Users</h5>
+                  <span class="doc-head__sub-title"> Mange Users Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Users are able to create or edit offer/advertisements from their dashboard. From Manage User menu
+                      you can see the users list of Active Users, Banned Users, Email Unverified Users, Mobile
+                      Unverified Users, KYC Unverified Users, KYC Pending Users.You can manage your users like update
+                      their information, notify them, view their login history, and ban them from the system from their
+                      details page. Also you can send notification to all users.
+                    </p>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_users.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      In user details page you can get an overview about the users like how many advertisement, how many
+                      deposit, how many withdrawals, and total transactions of the users.
+
+                      Admin is able to update user information and can add/subtract balance, view login history, ban the
+                      users from this details page.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/user_details.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="manage-ad" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Ads</h5>
+                  <span class="doc-head__sub-title"> Mange Ads Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="mb-1">
+                      In Manage Ads there are tow sub-menu:
+                    </p>
+                    <ol>
+                      <li>Limit</li>
+                      <li>Advertisements</li>
+                    </ol>
+
+                    <div>
+                      <h6>Limit:</h6>
+                      <p>
+                        Advertisement limit refers to how many advertisements a user can create. Admin can decide how
+                        many offers can be made after completing how many trades.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_limit.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+
+
+
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <div>
+                      <h6>Advertisements:</h6>
+                      <p>
+                        In this menu admin can see the advertisements/offers created by the users of this system. Also
+                        admin is able to enable or disable advertisements.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/manage_limit.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="manage-trade" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Manage Trades</h5>
+                  <span class="doc-head__sub-title">Manage Trades Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>From the <b>Manage Trade</b> menu admin can see the trade list of users.</p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>Running: In running trades admin can see only those trades where any party did not finish or
+                        cancel the trade yet.</li>
+                      <li>Reported: In completed trades, the admin can see only those trades that are reported/disputed
+                        by the
+                        buyer or the seller.</li>
+                      <li>Completed: In completed trades, the admin can see only those trades that are already finished
+                        or canceled.
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/all_trades.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-crypto-currencies" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Crypto Currencies</h5>
+                  <span class="doc-head__sub-title">Crypto Currencies Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Crypto Currencies</b> menu admin can add or update the cryptocurrencies that users can
+                      buy
+                      or sell. Also admin is able to enable/disable a cryptocurrency.
+                    </p>
+
+                    <p>
+                      For each cryptocurrency, the admin is able to set deposit and withdrawal charges. The charges will
+                      apply to users' deposit or withdrawal.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/crypto_currencies.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-fiat-currencies" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Fiat Currencies</h5>
+                  <span class="doc-head__sub-title">Fiat Currencies Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Fiat Currencies</b> menu admin can add or update the fiat currencies so that users can
+                      buy/sell crypto in return for the fiat currencies. Also, the admin is able to enable/disable a
+                      cryptocurrency.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fiat_currencies.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="manage-fiat-gateways" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Fiat Gateways</h5>
+                  <span class="doc-head__sub-title">Fiat Gateways Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Fiat Gateways</b> menu, admin can add or update the fiat gateways by which users can
+                      pay
+                      the fiat currency amount while trading.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fiat_gateways.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="payment-windows" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Payment Windows</h5>
+                  <span class="doc-head__sub-title">Payment Windows Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Payment Windows</b> menu, admin can add or update or remove payment windows to use
+                      while creating or updating a advertisement by user. All payment windows values are in minutes unit
+                      that refers as long as the payment has to be completed within the time.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/fiat_gateways.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="deposits" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Deposits</h5>
+                  <span class="doc-head__sub-title">Deposits Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Deposits</b> menu, admin can see the deposit history and details deposited by the
+                      users. Also admin is able to search deposit data by the transaction number or username.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/deposits.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="withdrawals" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Withdrawals</h5>
+                  <span class="doc-head__sub-title">Withdrawals Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Withdrawals</b> menu, admin can see the withdrawal request and withdrawal history by
+                      the
+                      users. Also admin is able to
+                      search withdrawal data by
+                      the transaction number or username.
+                    </p>
+
+                    <strong>Note:</strong> Admin need to approve pending withdrawal from the details
+                    page.
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/withdrawals.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="support-tickets" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Support Ticket</h5>
+                  <span class="doc-head__sub-title">Support Ticket Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Support Ticket</b> menu, admin can manage all support tickets opened by the users.
+                      Admin is able to reply or close a ticket from its details page.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/support_tickets.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="reports" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Report</h5>
+                  <span class="doc-head__sub-title">Report Overview </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      From the <b>Report</b> menu, admin can see the Transaction Log, Login History and the Notification
+                      History.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/report.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">General Setting</h5>
+                  <span class="doc-head__sub-title">
+                    General Settings overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information of your website from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Site Title:</strong> The name of your website.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Completed Trade Charge: </strong>The charge will apply while trading for the user who
+                          is selling the cryptocurrency.
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Base Color:</strong> The base color of your website.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Time Zone:</strong> Timezone of your application.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/general_settings.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="system-config" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">System Configuration</h5>
+                  <span class="doc-head__sub-title">
+                    System Configuration overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      You can set the basic information of your website from the general setting.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+
+                      <li>
+                        <p class="m-0">
+                          <strong>User Registration : </strong> You can enable or disable the registration.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Force SSL : </strong> If you enable this, that means forcing HTTPS on all traffic.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Agree Policy : </strong> If this module enabled, users must have to agree with the
+                          system policies during registration process.
+                        </p>
+                      </li>
+
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Force Secure Password : </strong> If this module enabled, users must have to put a
+                          strong password.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>KYC Verification : </strong> You can enable or disable the KYC Verification
+                          system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Email Verification : </strong> You can enable or disable the Email Verification
+                          system.
+                        </p>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>Email Notification :</strong> You can enable or disable the Email Notification system.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Mobile Verification :</strong> You can enable or disable the Mobile Verification
+                          system.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>SMS Notification :</strong> You can enable or disable the SMS Notification system.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Push Notification :</strong> You can enable or disable the Push Notification system.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/system_config.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="api-setting" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Api Setting</h5>
+                  <span class="doc-head__sub-title">
+                    Api Setting overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      To automate the currency rates and deposit system you we are using some 3rd party API.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Currency Layer: </strong> To automatically update the fiat currency rates you need to
+                          configure it through the <a href="https://currencylayer.com/"> Api Key</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>CoinMarketCap: </strong> To automatically update the cryptocurrency rates you need to
+                          configure it through the <a href="https://coinmarketcap.com/"> Api Key</a>
+                      </li>
+
+                      <li>
+                        <p class="m-0">
+                          <strong>CoinPayment Setting:</strong> To automate the deposit process you need to provide your
+                          coinpayment credentials.
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/api_setting.png" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="extensions" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Extension Manager</h5>
+                  <span class="doc-head__sub-title">
+                    Extension Manager overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p class="lead">
+                      It is a unique feature for you. We have added all the important and required plugins in our admin
+                      panel. You will have full control over these plugins and you can configure them as you want.
+                    </p>
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Recaptcha 2:</strong> Google Recaptcha 2 is used for protect robotic request to
+                          your system. To get google recaptcha 2 credentials <a
+                            href="https://www.google.com/recaptcha/admin/create" target="_blank">Click Here</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Tawk.to:</strong> Tawk.to is third party live chat platform. You can enable this
+                          extension by providing api key from <a href="https://www.tawk.to/" target="_blank">tawk.to</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Custom Captcha:</strong> This extension also protect robotic attack to your system.
+                          This is not third party extension. This is internal extension of our system
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Google Analytics:</strong> This extension is used to track your visitors. Overview of
+                          your web page and visitors are tracked by google analytics. To get credentials of google
+                          analytics, <a href="https://analytics.google.com" target="_blank">Click Here</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Facebook Comment:</strong> Facebook comment is used to manage blog's comments of our
+                          system. If you enable this, a facebook comment box will be shown in blog page. To get
+                          credentials of facebook comment, <a href="https://developers.facebook.com/"
+                            target="_blank">Click Here</a>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/plugin.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="seo" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">SEO Manager</h5>
+                  <span class="doc-head__sub-title">
+                    SEO Manager overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      SEO now becomes a very important part of any website, and that is why we have added a simple but
+                      powerful SEO manager tool in the admin panel. Now you can set your SEO keywords, meta tag, and OG
+                      image from your admin panel without paying anyone. SEO setting is just one-click away.
+                    </p>
+
+                    <ul class="list list--base" style="--gap: 0.5rem">
+                      <li>
+                        <p class="m-0">
+                          <strong>SEO Image:</strong> This image will show when you'll share the site link anywhere.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Meta Keywords:</strong> Put here some keywords related to your site. This will help to
+                          rank your site to search engines.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Meta Description:</strong> This description will show in search engines. Also, related
+                          descriptions will help to rank your website in search engines.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Social Title:</strong> This title will show when sharing the link to social media.
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-0">
+                          <strong>Social Description:</strong> This description will show below the title when sharing
+                          the link to social media.
+                        </p>
+                      </li>
+                    </ul>
+
+
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/seo.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="language" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Language Manager</h5>
+                  <span class="doc-head__sub-title">
+                    Built-In Language Manager overview
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Nowadays, many website owners want to localize their websites. They want to set many languages so
+                      users can choose and see the website in their mother language. But they can not set as many other
+                      software providers don't give that option Built-in and they charge a high amount of money to set
+                      that, In our product, you need not to pay any single penny for that. we include a unique language
+                      manager where you can easily set any language within a very short time.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="doc-body--alt t-center">
+                    <img src="assets/images/lang.jpg" alt="image" class="img-fluid" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="support" class="section--sm">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-12">
+              <div class="doc-head">
+                <div class="doc-head__content">
+                  <h5 class="doc-head__title">Support</h5>
+                  <span class="doc-head__sub-title">
+                    Support information details
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row g-4">
+                <div class="col-xl-6">
+                  <div class="doc-body h-auto">
+                    <p>
+                      Once again, thank you so much for purchasing this Script. As I said at the beginning, I'd be glad
+                      to help you if you have any questions relating to this Script. No guarantees, but I'll do my best
+                      to assist. If you have any queries, please feel free to contact us at Support Center.
+                    </p>
+                    <p class="m-0 xl-text">
+                      Email Us:
+                      <a href="https://viserlab.com/support" class="t-link">
+                        https://viserlab.com/support
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery library -->
+  <script src="assets/js/lib/jquery-3.6.0.min.js"></script>
+  <!-- bootstrap 5 js -->
+  <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+  <!-- Simplebar Js  -->
+  <script src="assets/js/lib/simplebar.js"></script>
+  <!-- main js -->
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
