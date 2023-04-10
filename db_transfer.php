@@ -12,8 +12,8 @@
 // }
 
 $host = "localhost";
-$username = "mygzkdqb_laravel";
-$password = "Laravel123@";
+$username = "mygzkdqb";
+$password = "Junaid@BCHINDEX01";
 $dbname = "mygzkdqb_laravel";
 
 $conn = mysqli_connect($host, $username, $password, $dbname);

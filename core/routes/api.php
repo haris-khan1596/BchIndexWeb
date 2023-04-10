@@ -12,9 +12,60 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+// Route::middleware('auth:sanctum')->group(function () {
+//     Route::namespace('Spot\Api')->prefix('spot')->name('spot.')->group(function () {
+//         Route::get('pairs', 'SpotOrdersController@pairs')->name('pairs');
+//         Route::get('create/{pair}', 'SpotOrdersController@create')->name('create');
+//         Route::post('limitorder', 'SpotOrdersController@spotLimitOrder')->name('limitorder');
+//         Route::post('stoplimitorder', 'SpotOrdersController@SpotStopLimitOrder');
+//         Route::post('marketorder', 'SpotOrdersController@SpotMarketOrder');
+//         Route::get('testfunction', function(){
+//             return response()->json(['success' => 'testfunction']);
+//             });
+//         });
+
+//     Route::namespace('Spot\Api')->prefix('transactions')->name('transactions.')->group(function () {
+//         Route::get('p2p_to_spot', 'TrasactionController@transfer_p2p')->name('p2p_to_spot');
+//         Route::post('p2p_to_spot_post', 'TrasactionController@transfer_p2p_post')->name('p2p_to_spot_post');
+//         Route::get('spot_to_p2p', 'TrasactionController@transfer_spot')->name('spot_to_p2p');
+//         Route::post('spot_to_p2p_post', 'TrasactionController@transfer_spot_post')->name('spot_to_p2p_post');
+//     });
+
+// });
+Route::get('p2p_to_spot', 'Spot\Api\TrasactionController@transfer_spot')->name('p2p_to_spot');
+Route::middleware('auth:sanctum')->group(function () {
+    Route::namespace('Spot\Api')->prefix('spot')->name('spot.')->group(function () {
+        Route::get('pairs', 'SpotOrdersController@pairs')->name('pairs');
+        Route::get('create/{pair}', 'SpotOrdersController@create')->name('create');
+        Route::post('limitorder', 'SpotOrdersController@spotLimitOrder')->name('limitorder');
+        Route::post('stoplimitorder', 'SpotOrdersController@SpotStopLimitOrder');
+        Route::post('marketorder', 'SpotOrdersController@SpotMarketOrder');
+        Route::get('cancel/order/{orderId}/{type}','SpotOrdersController@cancel');
+        
+    });
+    
+    Route::namespace('Spot\Api')->prefix('transactions')->name('transactions.')->group(function () {
+        Route::get('p2p_to_spot', 'TrasactionController@transfer_p2p')->name('p2p_to_spot');
+        Route::post('p2p_to_spot_post', 'TrasactionController@transfer_p2p_post')->name('p2p_to_spot_post');
+        Route::get('spot_to_p2p', 'TrasactionController@transfer_spot')->name('spot_to_p2p');
+        Route::post('spot_to_p2p_post', 'TrasactionController@transfer_spot_post')->name('spot_to_p2p_post');
+    });
+    Route::namespace('Spot\Api')->prefix('wallets')->group(function(){
+        Route::get('get/{id}','Wallet@index');
+    });
+});
+Route::namespace('Spot\Api')->prefix('wallets')->group(function(){
+        Route::get('get/{id}','Wallet@index');
+    });
+Route::get('testfunction', function(){
+    return response()->json(['success' => 'testfunction']);
+    });
+
+
+
+// Route::post('limitorder', 'SpotOrdersController@spotLimitOrder');
 
 Route::namespace('Api')->name('api.')->group(function () {
-
     Route::get('general-setting', function () {
         $general = gs();
         $notify[] = 'General setting data';
@@ -27,7 +78,7 @@ Route::namespace('Api')->name('api.')->group(function () {
             ],
         ]);
     });
-
+    
     // BasicController
     Route::controller('BasicController')->group(function () {
         Route::get('cryptos', 'cryptos');
@@ -158,7 +209,7 @@ Route::namespace('Api')->name('api.')->group(function () {
                 });
             });
         });
-
+        
         Route::get('logout', 'Auth\LoginController@logout');
     });
 });

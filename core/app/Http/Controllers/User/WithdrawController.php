@@ -45,6 +45,12 @@ class WithdrawController extends Controller
             return back()->withNotify($notify);
         }
 
+        //check if amount is less than minimum withdraw amount
+        if ($request->amount < $crypto->rate * 15) {
+            $notify[] = ['error', 'Minimum withdraw amount is $15'];
+            return back()->withNotify($notify);
+        }
+
         $user = auth()->user();
         $userWallet = Wallet::where('user_id', $user->id)->where('crypto_currency_id', $crypto->id)->firstOrFail();
 

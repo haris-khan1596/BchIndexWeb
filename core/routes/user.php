@@ -144,6 +144,44 @@ Route::middleware('auth')->name('user.')->group(function () {
             Route::get('/wallets/generate/{crypto}', 'Gateway\PaymentController@walletGenerate')->name('wallets.generate');
         });
 
+        // Spot Wallet
+        Route::middleware(['registration.complete', 'kyc'])->controller('Gateway\PaymentController')->group(function () {
+            Route::get('/spot-wallet', 'P2pSpotTransfer@spotWallet')->name('spot-wallet');
+        });
+
+        // Exchange Spot
+        Route::middleware(['registration.complete', 'kyc'])->controller('Gateway\PaymentController')->group(function () {
+            Route::get('/exchange/{pair}', 'Spot\OrderBookController@create');
+            //Route::post('/exchange/{pair}','Spot\OrderBookController@store');
+            Route::post('/exchange/{pair}/limit','Spot\OrderController@SpotLimitOrder');
+            Route::post('/exchange/{pair}/market','Spot\OrderController@SpotMarketOrder');
+            Route::post('/exchange/{pair}/stoplimit','Spot\OrderController@SpotStopLimitOrder');
+
+            Route::post('/exchange/{pair}/cancel','Spot\OrderController@SpotCancelOrder');
+
+            Route::get('/exchange/{pair}/orderBookUpdate/{time}', 'Spot\OrderBookController@orderBookUpdate')->name('orderBookUpdate'); //ajax
+
+            Route::post('/exchange/orders/cancel/{orderId}/{type}', 'Spot\OrderController@cancel')->name('orders.cancel');
+
+            // Order BookTableUpdate
+            Route::get('/exchange/{pair}/orderBookUpdate', 'Spot\OrderBookController@orderBookUpdate')->name('orderBookUpdate');
+        });
+
+         // Transfer from Spot To P2P
+        Route::middleware(['registration.complete', 'kyc'])->controller('Gateway\PaymentController')->group(function () {
+            Route::get('/{Cid}/{Uid}/transfer_p2s', 'Gateway\PaymentController@transfer_p2s')->name('transfer_p2s');
+            Route::post('/{Cid}/{Uid}/transfer_p2s', 'Gateway\PaymentController@transfer_p2s_post');
+
+        });
+
+        // Transfer from P2P To Spot
+        Route::middleware(['registration.complete', 'kyc'])->controller('Gateway\PaymentController')->group(function () {
+            Route::get('/{Wid}/transfer_p2p', 'Gateway\PaymentController@transfer_p2p')->name('transfer_p2p');
+            Route::post('/transfer_p2p', 'Gateway\PaymentController@transfer_p2p_post');
+        });
+
+
+
         // Transfer
         Route::middleware(['registration.complete', 'kyc'])->namespace('User')->controller('UserTransferMoneyController')->group(function(){
             Route::get('/transfer/money/{id?}', 'transfer')->name('transfer');
@@ -151,6 +189,7 @@ Route::middleware('auth')->name('user.')->group(function () {
             Route::get('/user/receipt/{id}/{ajax?}', 'p2p_receipt')->name('transfer-user-receipt');
             Route::post('/transfer/money', 'transferMoney')->name('transfer-money-post');
         });
+
         //Exchange money
         Route::middleware(['registration.complete', 'kyc'])->namespace('User')->controller('MoneyExchangeController')->group(function(){
             Route::get('/exchange/money', 'exchangeForm')->name('exchange.money');

@@ -1,32 +1,44 @@
 @php
-$cryptos = getTopWallet();
+    $cryptos = getTopWallet();
 @endphp
 <style>
-    @media (min-width: 1200px){
+    @media (min-width: 1200px) {
         .container {
             max-width: 1471px;
         }
     }
-.nav-right .mode--toggle {
-    display: none !important;
-}
 
-.mode--toggle {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: right;
-    cursor: pointer;
-    color: #fff;
-}
-.select2-container{ display: inline-grid !important;}
+    .nav-right .mode--toggle {
+        display: none !important;
+    }
+
+    .mode--toggle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: right;
+        cursor: pointer;
+        color: #000;
+        background-color: #fff;
+    }
+
+    .select2-container {
+        display: inline-grid !important;
+    }
+
+    .header.menu-fixed .header__bottom {
+        background-color: #212529;
+    }
 </style>
 <header class="header">
     <div class="header__bottom">
         <div class="container">
             <nav class="navbar navbar-expand-xl p-0 align-items-center">
-                <a class="site-logo site-title" href="{{ route('home') }}"><img src="{{ getImage('assets/images/logoIcon/logo.png') }}" alt="site-logo"></a>
-                <button class="navbar-toggler ms-auto shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="site-logo site-title" href="{{ route('home') }}"><img
+                        src="{{ getImage('assets/images/logoIcon/logo.png') }}" alt="site-logo"></a>
+                <button class="navbar-toggler ms-auto shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="menu-toggle"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -36,17 +48,22 @@ $cryptos = getTopWallet();
                         <li class="menu_has_children"><a href="javascript:void(0)">@lang('Buy')</a>
                             <ul class="sub-menu">
                                 @foreach ($cryptos as $crypto)
-                                    <li class="test_info"><a href="{{ route('buy.sell', ['buy', $crypto->code, 'all']) }}">{{ $crypto->code }}</a></li>
+                                    <li class="test_info"><a
+                                            href="{{ route('buy.sell', ['buy', $crypto->code, 'all']) }}">{{ $crypto->code }}</a>
+                                    </li>
                                 @endforeach
-                                <li class="test_info"><a href="{{ route('buy.sell', ['buy','btc', 'all']) }}">More</a></li>
+                                <li class="test_info"><a href="{{ route('buy.sell', ['buy', 'btc', 'all']) }}">More</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="menu_has_children"><a href="javascript:void(0)">@lang('Sell')</a>
                             <ul class="sub-menu">
                                 @foreach ($cryptos as $crypto)
-                                    <li><a href="{{ route('buy.sell', ['sell', $crypto->code, 'all']) }}">{{ $crypto->code }}</a></li>
+                                    <li><a
+                                            href="{{ route('buy.sell', ['sell', $crypto->code, 'all']) }}">{{ $crypto->code }}</a>
+                                    </li>
                                 @endforeach
-                                    <li><a href="{{ route('buy.sell', ['sell','btc', 'all']) }}">More</a></li>
+                                <li><a href="{{ route('buy.sell', ['sell', 'btc', 'all']) }}">More</a></li>
                             </ul>
                         </li>
                         <li class="menu_has_children"><a href="#">@lang('Our App')</a>
@@ -55,7 +72,7 @@ $cryptos = getTopWallet();
                                     <img src="{{ getImage('assets/images/and_app.jpeg') }}">
                                 </li>
                             </ul>
-                        @auth
+                            @auth
                             <li><a href="{{ route('user.advertisement.index') }}">@lang('Post An Ad')</a></li>
                             <li class="menu_has_children"><a href="javascript:void(0)">@lang('Trades')</a>
                                 <ul class="sub-menu">
@@ -64,29 +81,36 @@ $cryptos = getTopWallet();
                                 </ul>
                             </li>
                             <li><a href="{{ route('user.transfer') }}">@lang('P2P Transfer')</a></li>
-{{--                            <li><a href="{{route('user.exchange.money')}}">@lang('Exchange')</a></li>--}}
-                            <li><a href="{{ route('user.wallets') }}">@lang('Wallets')</a></li>
+                            {{--                            <li><a href="{{route('user.exchange.money')}}">@lang('Exchange')</a></li> --}}
+                            <li class="menu_has_children"><a href="javascript:void(0)">@lang('Wallets')</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('user.wallets') }}">@lang('P2P Wallet')</a></li>
+                                    <li><a href="{{ route('user.spot-wallet') }}">@lang('Spot Wallet')</a></li>
+                                </ul>
+                            </li>
                             <li><a href="{{ route('user.transaction.index') }}">@lang('Transactions')</a></li>
                         @endauth
 
 
-                       <!--
+                        <!--
 
                 @auth
-                            <li><a href="{{ route('user.deposit.history') }}">@lang('Deposits')</a></li>
-                            <li><a href="{{ route('user.withdraw.history') }}">@lang('Withdrawals')</a></li>
+                                                                                                                                                                    <li><a href="{{ route('user.deposit.history') }}">@lang('Deposits')</a></li>
+                                                                                                                                                                    <li><a href="{{ route('user.withdraw.history') }}">@lang('Withdrawals')</a></li>
                         @endauth -->
 
                         @auth
                             <li class="menu_has_children"><a href="javascript:void(0)">@lang('More')</a>
                                 <ul class="sub-menu">
                                     @foreach ($pages as $k => $data)
-                                        <li><a href="{{ route('pages', [$data->slug]) }}" class="nav-link">{{ __($data->name) }}</a></li>
+                                        <li><a href="{{ route('pages', [$data->slug]) }}"
+                                                class="nav-link">{{ __($data->name) }}</a></li>
                                     @endforeach
                                     <li><a href="{{ route('ticket') }}">@lang('Support')</a></li>
                                     <li><a href="{{ route('user.deposit.history') }}">@lang('Deposits')</a></li>
                                     <li><a href="{{ route('user.withdraw.history') }}">@lang('Withdrawals')</a></li>
-                                    <li><a href="{{ route('user.referral.commissions.trade') }}">@lang('Referral')</a></li>
+                                    <li><a href="{{ route('user.referral.commissions.trade') }}">@lang('Referral')</a>
+                                    </li>
                                     <li><a href="{{ route('user.change.password') }}">@lang('Password')</a></li>
                                     <li><a href="{{ route('user.profile.setting') }}">@lang('Profile Setting')</a></li>
                                     <li><a href="{{ route('user.twofactor') }}">@lang('2FA Security')</a></li>
@@ -95,7 +119,7 @@ $cryptos = getTopWallet();
                             </li>
 
                         @endauth
-                        <li><a href="https://www.bchindexspot.com">@lang('Spot Trading')</a></li>
+                        <li><a href="{{ url('exchange') }}">@lang('Spot Trading')</a></li>
                     </ul>
 
                     <div class="nav-right">
@@ -103,7 +127,9 @@ $cryptos = getTopWallet();
                         @if (!blank($language))
                             <select class="language-select langSel rounded-2 h-100">
                                 @foreach ($language as $item)
-                                    <option value="{{ $item->code }}" @if (session('lang') == $item->code) selected @endif>{{ __($item->name) }}</option>
+                                    <option value="{{ $item->code }}"
+                                        @if (session('lang') == $item->code) selected @endif>{{ __($item->name) }}
+                                    </option>
                                 @endforeach
 
                             </select>

@@ -46,6 +46,14 @@ Route::middleware('admin')->group(function () {
     //manage Transfer charge
     Route::get('transaction-charges','TransactionChargeController@manageCharges')->name('transaction.charges');
     Route::post('transaction-charges/update','TransactionChargeController@updateCharges')->name('charges.update');
+    Route::get('spotTrading','SpotTransactionChargeController@index')->name('spotTrading.charge');
+    Route::post('coins-pairs','SpotTransactionChargeController@add_pair');
+    Route::get('coin-pair/del/{id}','SpotTransactionChargeController@del_pair');
+    Route::get('coin-pair/update/{id}/{status}','SpotTransactionChargeController@update_pair');
+    Route::post('transaction_charge_p2p_to_spot','SpotTransactionChargeController@update_s2p');
+    Route::post('transaction_charge_spot_to_p2p', 'SpotTransactionChargeController@update_p2s');
+
+    Route::post('setBot','SpotTransactionChargeController@setBot');
 
     // Users Manager
     Route::controller('ManageUsersController')->name('users.')->prefix('users')->group(function () {
@@ -62,7 +70,7 @@ Route::middleware('admin')->group(function () {
 
         Route::get('detail/{id}', 'detail')->name('detail');
         Route::get('delete/{id}', 'delete')->name('delete');
-        
+
         Route::get('kyc-data/{id}', 'kycDetails')->name('kyc.details');
         Route::post('kyc-approve/{id}', 'kycApprove')->name('kyc.approve');
         Route::post('kyc-reject/{id}', 'kycReject')->name('kyc.reject');

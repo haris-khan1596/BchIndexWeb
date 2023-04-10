@@ -6,13 +6,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/clear', function () {
     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
 });
-
+Route::get('/exchange/{pair}', 'Spot\OrderBookController@guestcreate');
+Route::post('/exchange','Spot\OrderBookController@changeCoinPair')->name('coinPairForm');
+Route::get('/exchange', 'Spot\OrderBookController@exchange')->name('user.exchange');
 //Crons
 //Route::get('cron/fiat-currency', 'CronController@fiatRate');
 //Route::get('cron/crypto-currency', 'CronController@cryptoRate');
-
+Route::get('user/exchange/{pair}/GetData/{time}', 'Spot\OrderBookController@GetData')->name('GetData');//ajax
 Route::get('cron/fiat-currency', 'CronController@fiatRate')->name('cron.fiat.rate');
 Route::get('cron/crypto-currency', 'CronController@cryptoRate')->name('cron.crypto.rate');
+Route::get('cron/FakeChart', 'CronController@fakeChart')->name('cron.fake.chart');
+Route::get('cron/delFakeChart', 'CronController@DelFakeChart')->name('cron.delete.fake.chart');
 
 // Coin Payments
 Route::controller('Gateway\PaymentController')->prefix('ipn')->name('ipn.')->group(function () {
@@ -58,6 +62,8 @@ Route::controller('SiteController')->group(function () {
 
     Route::get('/{slug}', 'pages')->name('pages');
     Route::get('/', 'index')->name('home');
+
+
 
     // Buy Sell Operation
     Route::get('/{buysell}/{crypto}/{countryCode}/{fiatgt?}/{fiat?}/{amount?}', 'buySell')->name('buy.sell');

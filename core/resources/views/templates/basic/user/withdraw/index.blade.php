@@ -10,7 +10,8 @@
                         </div>
                         <div class="content">
                             <span class="d-widget2__caption">@lang('Current Balance')</span>
-                            <h4 class="d-widget2__amount">{{ showAmount($userBalance->balance/$crypto->rate, 6) }} {{ $crypto->code }}</h4>
+                            <h4 class="d-widget2__amount">{{ showAmount($userBalance->balance / $crypto->rate, 6) }}
+                                {{ $crypto->code }}</h4>
                         </div>
                     </div>
                 </div>
@@ -43,7 +44,7 @@
                             <span class="d-widget2__caption">@lang('Withdrawal Limit')</span>
                             <h4 class="d-widget2__amount">
                                 @if ($maxWithdrawAmount > 0)
-                                    {{ showAmount($maxWithdrawAmount/$crypto->rate, 6) }} {{ $crypto->code }}
+                                    {{ showAmount($maxWithdrawAmount / $crypto->rate, 6) }} {{ $crypto->code }}
                                 @else
                                     0.00000000 {{ $crypto->code }}
                                 @endif
@@ -63,14 +64,21 @@
 
                         <div class="col-lg-8">
                             <div class="form-group">
-                                <input type="text" name="wallet" class="form-control" placeholder="@lang('Wallet Address')" required>
+                                <input type="text" name="wallet" class="form-control" placeholder="@lang('Wallet Address')"
+                                    required>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <input type="number" step="any" name="amount" class="form-control" placeholder="@lang('Withdraw Amount')" autocomplete="off" required>
-                                <small class="text--base"><span>@lang('Charge :')</span> <span class="withdraw-charge">0.00 {{ $crypto->code }}</span></small>
+                                <input type="number" step="any" name="amount" class="form-control"
+                                    placeholder="@lang('Withdraw Amount')" autocomplete="off" required>
+                                <small class="text--base"><span>@lang('Charge :')</span> <span class="withdraw-charge">0.00
+                                        {{ $crypto->code }}</span></small>
+                                <br> <small class="text--base"><span>@lang('Min Withdrawal : $')</span> <span
+                                        class="withdraw-charge">15.00</span></small>
+                                <br>
+                                <small class="text--base"><span>@lang('Max Withdrawal : Unlimited')</span></small>
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -126,13 +134,14 @@
                 var fixedCharge = '{{ $crypto->withdraw_charge_fixed }}';
                 var percentCharge = '{{ $crypto->withdraw_charge_percent }}';
                 var rate = '{{ $crypto->rate }}';
-                var crypto_val = parseFloat(value).toFixed(2)/parseFloat(rate).toFixed(6);
-                console.log('fixedCharge:'+fixedCharge);
-                console.log('percentCharge:'+percentCharge);
-                console.log('value:'+value);
-                console.log('rate:'+rate);
-                console.log('crypto_val:'+crypto_val);
-                var charge = parseFloat(fixedCharge) + (parseFloat(crypto_val) * parseFloat(percentCharge) / 100);
+                var crypto_val = parseFloat(value).toFixed(2) / parseFloat(rate).toFixed(6);
+                console.log('fixedCharge:' + fixedCharge);
+                console.log('percentCharge:' + percentCharge);
+                console.log('value:' + value);
+                console.log('rate:' + rate);
+                console.log('crypto_val:' + crypto_val);
+                var charge = parseFloat(fixedCharge) + (parseFloat(crypto_val) * parseFloat(percentCharge) /
+                    100);
                 if (charge) {
                     $('.withdraw-charge').text(parseFloat(charge).toFixed(6) + ' {{ $crypto->code }}');
                 } else {

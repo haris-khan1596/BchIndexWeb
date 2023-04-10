@@ -7,6 +7,11 @@ use App\Models\FiatCurrency;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Spot\ChartController;
+use App\Models\CoinPair;
+
+
 class CronController extends Controller
 {
     public function fiatRate()
@@ -138,4 +143,24 @@ class CronController extends Controller
         die('EXECUTED');
         
     }
+
+    public function fakeChart()
+    {
+        Artisan::call('FChart:cron');
+        
+        // iterate on each CoinPair and call ChartController::AddNewCandle()
+        $coinPairs = CoinPair::all();
+
+        foreach ($coinPairs as $coinPair) {
+            ChartController::AddNewCandle($coinPair->id);
+        }
+
+    }
+
+    public function DelFakeChart()
+    {
+        Artisan::call('FChart:del');
+    }
+
+    
 }
